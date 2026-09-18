@@ -2,11 +2,11 @@ import FoodCard from "../components/FoodCard";
 import { FoodData } from "../types";
 
 const page = async () => {
-  //Fetching Data:
+  //Fetching Data: option 1 using async , await
   const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods/top-foods");
   const data = await res.json();
   const foodData: FoodData[] = data.data;
-  //   console.log("Food data:",data)
+  console.log("Food data:", data);
 
   return (
     <div>
