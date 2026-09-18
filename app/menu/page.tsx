@@ -10,9 +10,12 @@ const page = async () => {
 
   return (
     <div>
-      {foodData.map((info) => (
-        <FoodCard key={info.id} info={info}></FoodCard>
-      ))}
+      <h1>Total Food Menu:{foodData.length}</h1>
+      <div className=" grid grid-cols-3 gap-5">
+        {foodData.map((info) => (
+          <FoodCard key={info.id} info={info}></FoodCard>
+        ))}
+      </div>
     </div>
   );
 };
